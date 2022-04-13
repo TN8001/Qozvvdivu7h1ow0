@@ -7,7 +7,7 @@ namespace Qozvvdivu7h1ow0
 {
     public partial class Form1 : Form
     {
-        private const int cellWidth = 50;
+        private const int cellWidth = 60;
         private const int cellHeight = 30;
 
         private readonly TableLayoutPanel tableLayoutPanel1;
@@ -46,6 +46,12 @@ namespace Qozvvdivu7h1ow0
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / 24 / 2));
 
             splitContainer2.Panel2.Controls.Add(tableLayoutPanel1);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var firsttime = (int)new TimeSpan(9, 0, 0).TotalMinutes;
+            splitContainer1.Panel2.AutoScrollPosition = new Point(firsttime, 0);
         }
 
         private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -201,19 +207,11 @@ namespace Qozvvdivu7h1ow0
             toolTip1.Show(t, target, 0, -50);
         }
 
-        private void panelEx1_MouseDown(object sender, MouseEventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panelEx1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panelEx1_MouseUp(object sender, MouseEventArgs e)
-        {
-
+            var m = (int)DateTime.Now.TimeOfDay.TotalMinutes;
+            var p = new Point(m, -splitContainer1.Panel2.AutoScrollPosition.Y);
+            splitContainer1.Panel2.AutoScrollPosition = p;
         }
     }
 }
