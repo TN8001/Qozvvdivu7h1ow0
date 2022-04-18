@@ -1,1 +1,1 @@
-﻿[自動生成しているラベルを重ねない方法、範囲外に出た時の対処方法](https://teratail.com/questions/ozvvdivu7h1ow0#reply-qqkdz5g2dx24sz)
+[Winform　起動時に指定の位置までスクロールしたい](https://teratail.com/questions/agpiom28dgl1iu)
