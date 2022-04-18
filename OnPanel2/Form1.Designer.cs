@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace OnPanel2
 {
     partial class Form1
@@ -32,12 +34,12 @@ namespace OnPanel2
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelEx1 = new OnPanel2.PanelEx();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panelEx1 = new OnPanel2.PanelEx();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,16 +57,17 @@ namespace OnPanel2
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.splitContainer1);
             this.panel1.Controls.Add(this.splitContainer2);
-            this.panel1.Location = new System.Drawing.Point(63, 44);
+            this.panel1.Location = new System.Drawing.Point(93, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(679, 355);
+            this.panel1.Size = new System.Drawing.Size(637, 345);
             this.panel1.TabIndex = 0;
             // 
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(10, 30);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel2
@@ -72,23 +75,38 @@ namespace OnPanel2
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.Controls.Add(this.panelEx1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.SplitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(679, 325);
-            this.splitContainer1.SplitterDistance = 226;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainer1.Size = new System.Drawing.Size(617, 305);
+            this.splitContainer1.SplitterDistance = 212;
+            this.splitContainer1.TabIndex = 1;
+            this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainer1_SplitterMoved);
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CellHeight = 30;
+            this.panelEx1.CellWidth = 60;
+            this.panelEx1.Location = new System.Drawing.Point(0, 0);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(1441, 301);
+            this.panelEx1.TabIndex = 0;
+            this.panelEx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseDown);
+            this.panelEx1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseMove);
+            this.panelEx1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseUp);
             // 
             // splitContainer2
             // 
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(10, 10);
             this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Size = new System.Drawing.Size(679, 30);
-            this.splitContainer2.SplitterDistance = 226;
-            this.splitContainer2.TabIndex = 1;
+            this.splitContainer2.Size = new System.Drawing.Size(617, 20);
+            this.splitContainer2.SplitterDistance = 212;
+            this.splitContainer2.TabIndex = 2;
+            this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.SplitContainer2_SplitterMoved);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(336, 13);
+            this.button1.Location = new System.Drawing.Point(311, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -109,18 +127,6 @@ namespace OnPanel2
             this.削除ToolStripMenuItem.Size = new System.Drawing.Size(112, 28);
             this.削除ToolStripMenuItem.Text = "削除";
             this.削除ToolStripMenuItem.Click += new System.EventHandler(this.削除ToolStripMenuItem_Click);
-            // 
-            // panelEx1
-            // 
-            this.panelEx1.CellHeight = 50;
-            this.panelEx1.CellWidth = 50;
-            this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(1441, 301);
-            this.panelEx1.TabIndex = 0;
-            this.panelEx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseDown);
-            this.panelEx1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseMove);
-            this.panelEx1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelEx1_MouseUp);
             // 
             // Form1
             // 
@@ -148,8 +154,8 @@ namespace OnPanel2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button button1;
         private PanelEx panelEx1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 削除ToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
