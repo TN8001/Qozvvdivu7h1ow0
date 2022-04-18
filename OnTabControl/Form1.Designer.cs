@@ -1,4 +1,4 @@
-﻿namespace Qozvvdivu7h1ow0
+﻿namespace OnTabControl
 {
     partial class Form1
     {
@@ -38,7 +38,7 @@
             this.削除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.panelEx1 = new Qozvvdivu7h1ow0.PanelEx();
+            this.panelEx1 = new OnTabControl.PanelEx();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();

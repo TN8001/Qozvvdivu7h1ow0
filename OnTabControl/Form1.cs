@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Qozvvdivu7h1ow0
+namespace OnTabControl
 {
     public partial class Form1 : Form
     {
@@ -51,7 +51,12 @@ namespace Qozvvdivu7h1ow0
         private void Form1_Load(object sender, EventArgs e)
         {
             var firsttime = (int)new TimeSpan(9, 0, 0).TotalMinutes;
-            splitContainer1.Panel2.AutoScrollPosition = new Point(firsttime, 0);
+            //splitContainer1.Panel2.AutoScrollPosition.X = firsttime; // CS1612
+            var p = splitContainer1.Panel2.AutoScrollPosition;
+            p.X = firsttime;
+            splitContainer1.Panel2.AutoScrollPosition = p;
+
+            //splitContainer1.Panel2.AutoScrollPosition = new Point(firsttime, 0);
         }
 
         private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

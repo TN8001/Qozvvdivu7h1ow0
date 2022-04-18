@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Qozvvdivu7h1ow0
+namespace OnTabControl
 {
     internal static class Program
     {

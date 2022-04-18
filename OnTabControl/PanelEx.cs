@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Qozvvdivu7h1ow0
+namespace OnTabControl
 {
     public class PanelEx : Panel // グリッド線付きPanel
     {
