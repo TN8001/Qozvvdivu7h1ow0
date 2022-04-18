@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace OnTabControl
+namespace OnPanel
 {
     public partial class Form1 : Form
     {
@@ -57,8 +57,14 @@ namespace OnTabControl
 
         private void SplitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-            //Debug.WriteLine("SplitContainer1_Panel2_Paint");
+            Debug.WriteLine("SplitContainer1_Panel2_Paint");
             tableLayoutPanel1.Left = splitContainer1.Panel2.AutoScrollPosition.X;
+        }
+
+        private void PanelEx1_Paint(object sender, PaintEventArgs e)
+        {
+            //Debug.WriteLine("PanelEx1_Paint");
+            //tableLayoutPanel1.Left = splitContainer1.Panel2.AutoScrollPosition.X;
         }
 
         private void SplitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
@@ -143,10 +149,7 @@ namespace OnTabControl
                 }
             }
         }
-        private void Label_MouseUp(object sender, MouseEventArgs e)
-        {
-            toolTip1.Hide((Label)sender);
-        }
+        private void Label_MouseUp(object sender, MouseEventArgs e) => toolTip1.Hide((Label)sender);
 
         private void 削除ToolStripMenuItem_Click(object sender, EventArgs e)
         {

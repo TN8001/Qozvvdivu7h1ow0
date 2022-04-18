@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32407.343
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTabControl", "OnTabControl\OnTabControl.csproj", "{D90EA42B-E8C7-4439-9010-99BB1D0C6492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnPanel", "OnPanel\OnPanel.csproj", "{C6177B1A-5BF0-472C-9ACA-F52B13AD92B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnPanel2", "OnPanel2\OnPanel2.csproj", "{47917F96-A73F-4FF0-9580-D3C3510D8CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D90EA42B-E8C7-4439-9010-99BB1D0C6492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D90EA42B-E8C7-4439-9010-99BB1D0C6492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D90EA42B-E8C7-4439-9010-99BB1D0C6492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6177B1A-5BF0-472C-9ACA-F52B13AD92B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6177B1A-5BF0-472C-9ACA-F52B13AD92B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6177B1A-5BF0-472C-9ACA-F52B13AD92B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6177B1A-5BF0-472C-9ACA-F52B13AD92B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47917F96-A73F-4FF0-9580-D3C3510D8CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47917F96-A73F-4FF0-9580-D3C3510D8CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47917F96-A73F-4FF0-9580-D3C3510D8CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47917F96-A73F-4FF0-9580-D3C3510D8CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

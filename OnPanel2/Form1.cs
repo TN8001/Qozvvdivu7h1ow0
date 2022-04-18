@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace OnTabControl
+namespace OnPanel2
 {
     public partial class Form1 : Form
     {
